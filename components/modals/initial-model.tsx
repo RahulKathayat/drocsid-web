@@ -1,6 +1,6 @@
 const InitiaLModel = () => {
     return ( <div>
-        init
+        arpit biryani chor
     </div> );
 }
  
