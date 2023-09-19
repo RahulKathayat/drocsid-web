@@ -1,6 +1,6 @@
 const InitiaLModel = () => {
     return ( <div>
-        initial model
+        init
     </div> );
 }
  
