@@ -31,7 +31,7 @@ model Server {
   imageUrl String @db.String
   inviteCode String @unique
 
-  profileId String
+  profileId String @db.ObjectId
   profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
   members Member[]
@@ -53,10 +53,10 @@ model Member {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   role MemberRole @default(GUEST)
 
-  profileId String
+  profileId String @db.ObjectId
   profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
-  serverId String
+  serverId String @db.ObjectId
   server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
@@ -77,10 +77,10 @@ model Channel {
   name String
   type ChannelType @default(TEXT)
 
-  profileId String
+  profileId String @db.ObjectId
   profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
-  serverId String
+  serverId String @db.ObjectId
   server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
