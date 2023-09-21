@@ -56,4 +56,4 @@ export async function PATCH(
     console.log("[SERVER_ID_PATCH]", error);
     return new NextResponse("Internal Error", { status: 500 });
   }
-}   
+}

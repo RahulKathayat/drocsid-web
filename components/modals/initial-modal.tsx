@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import axios from "axios";
 import * as z from "zod";
@@ -65,7 +65,6 @@ export const InitialModal = () => {
     } catch (error) {
       console.log(error);
     }
-    // console.log(values);
   }
 
   if (!isMounted) {
@@ -94,9 +93,9 @@ export const InitialModal = () => {
                     <FormItem>
                       <FormControl>
                         <FileUpload
-                        endpoint="serverImage"
-                        value={field.value}
-                        onChange={field.onChange}
+                          endpoint="serverImage"
+                          value={field.value}
+                          onChange={field.onChange}
                         />
                       </FormControl>
                     </FormItem>
@@ -122,7 +121,7 @@ export const InitialModal = () => {
                         {...field}
                       />
                     </FormControl>
-                    <FormMessage/>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
