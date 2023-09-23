@@ -55,7 +55,8 @@ export const NavigationSidebar = async () => {
               avatarBox: "h-[48px] w-[48px]"
             }
           }}
-        />
+          />
+        <div className="text-xs text-center">© 2023 Rahul Kathayat <br/></div>
       </div>
     </div>
   )
